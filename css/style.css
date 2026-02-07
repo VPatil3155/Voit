@@ -1,0 +1,163 @@
+/* GitHub Dark Theme Colors */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #c9d1d9;
+}
+
+/* Main Layout */
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #c9d1d9;
+
+    background: radial-gradient(circle at top, #07142c, #020617 70%);
+}
+
+/* Card Style */
+.card {
+    background: linear-gradient(145deg, #0b1628, #020617);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    width: 420px;
+
+    box-shadow:
+        0 0 40px rgba(88, 166, 255, 0.05),
+        inset 0 0 20px rgba(255,255,255,0.02);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #58a6ff;
+    box-shadow:
+        0 0 60px rgba(88, 166, 255, 0.2);
+}
+
+
+/* Profile Image */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+/* Social Links */
+.socials {
+    margin-top: 15px;
+}
+
+.socials a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #58a6ff;
+}
+
+/* Resume Button */
+.btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background: #238636;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* Code Block */
+.code pre {
+    color: #58a6ff;
+    font-size: 14px;
+}
+/* Projects Section */
+.projects-section {
+    padding: 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Repo Card Style */
+.repo-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.repo-card h3 {
+    margin-top: 0;
+    color: #58a6ff;
+}
+
+.repo-card p {
+    font-size: 14px;
+}
+
+.tech {
+    display: block;
+    margin: 10px 0;
+    color: #3fb950;
+    font-size: 13px;
+}
+
+.repo-card a {
+    text-decoration: none;
+    color: #58a6ff;
+    font-size: 14px;
+}
+.window-bar {
+    margin-bottom: 15px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+.hero {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 10%;
+}

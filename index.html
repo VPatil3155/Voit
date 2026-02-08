@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Vaibhav Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
@@ -11,7 +14,7 @@
 <header class="header">
     <h2>@Vaibhav</h2>
     <nav>
-        <a href="#">Projects</a>
+        <a href="#projects">Projects</a>
         <a href="#">Stats</a>
         <a href="#">Contributions</a>
     </nav>
@@ -30,19 +33,20 @@
         </p>
 
         <div class="socials">
-            <a href="https://github.com/VPatil3155">GitHub</a>
-            <a href="https://www.linkedin.com/in/vaibhav-patil-a95544308/">LinkedIn</a>
+            <a href="https://github.com/VPatil3155"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/vaibhav-patil-a95544308/"><i class="fa-brands fa-linkedin"></i></a>
         </div>
 
         <a href="resume/resume.pdf" class="btn">Get Resume</a>
     </div>
 
     <!-- Right Code Card -->
-    <div class="card code-card">
+ <div class="code-card">
+
     <div class="window-bar">
-        <!-- <span class="dot red"></span>
+        <span class="dot red"></span>
         <span class="dot yellow"></span>
-        <span class="dot green"></span> -->
+        <span class="dot green"></span>
     </div>
 
 <pre>
@@ -50,12 +54,36 @@ const developer = {
   name: "Vaibhav Patil",
   role: "Full Stack Developer",
   location: "India",
-  skills: ["HTML","CSS","JavaScript",
-           "Node.js","MongoDB","Java"],
+  skills: [
+    "HTML", "CSS", "JavaScript",
+    "Node.js", "MongoDB", "Java"
+  ],
   hireable: true
 };
 </pre>
+
 </div>
+
+<section id="education" class="section">
+    <h2>Education</h2>
+
+    <div class="card terminal">
+<pre>
+> loading education history...
+
+[2022 - 2026]  B.Tech - Information Technology
+               Your College Name
+               CGPA: 8.2
+
+[2020 - 2022]  Higher Secondary (12th)
+               Your School Name
+               Percentage: 85%
+
+status: academic_progress = "completed"
+</pre>
+    </div>
+</section>
+
 
 
 </section>

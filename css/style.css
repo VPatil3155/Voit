@@ -1,128 +1,283 @@
-/* GitHub Dark Theme Colors */
-body {
+/* ===============================
+   Reset & Base
+================================ */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background: #0d1117;
+    background: radial-gradient(circle at top, #07142c, #020617 70%);
     color: #c9d1d9;
 }
 
-/* Header */
+/* ===============================
+   Header
+================================ */
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
     display: flex;
     justify-content: space-between;
-    padding: 70px 50px;
+    align-items: center;
+    background: rgba(2, 6, 23, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #30363d;
+    z-index: 1000;
+}
+
+.logo {
+    color: #3fb950;
 }
 
 .header nav a {
-    margin-left: 20px;
+    margin-left: 25px;
     text-decoration: none;
     color: #c9d1d9;
+    font-size: 15px;
 }
 
-/* Main Layout */
-.main {
+.header nav a:hover {
+    color: #58a6ff;
+}
+
+/* ===============================
+   Section Base
+================================ */
+.section {
+    min-height: 100vh;
+    padding: 120px 10%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 40px;
-    padding: 80px;
+}
+
+/* ===============================
+   Hero / Intro
+================================ */
+.intro {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #c9d1d9;
-    background: radial-gradient(circle at top, #07142c, #020617 70%);
+
+.intro-left {
+    max-width: 520px;
 }
 
-/* Card Style */
-.card {
-    background: linear-gradient(145deg, #0b1628, #020617);
-    border: 1px solid rgba(88, 166, 255, 0.2);
-    border-radius: 12px;
-    padding: 30px;
-    width: 420px;
-
-    box-shadow:
-        0 0 40px rgba(88, 166, 255, 0.05),
-        inset 0 0 20px rgba(255,255,255,0.02);
-    transition: 0.3s;
+.intro-left h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-.card:hover {
-    border-color: #58a6ff;
-    box-shadow:
-        0 0 60px rgba(88, 166, 255, 0.2);
+.role {
+    font-size: 22px;
+    color: #58a6ff;
 }
 
-
-/* Profile Image */
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    display: block;
-    margin: auto;
-}
-
-/* Social Links */
-.socials {
+.tagline {
     margin-top: 15px;
+    color: #8b949e;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+/* Status */
+.status {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #8b949e;
+}
+
+.dot-status {
+    width: 8px;
+    height: 8px;
+    background: #3fb950;
+    border-radius: 50%;
+}
+
+/* Tech Stack */
+.tech-stack {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tech-stack span {
+    background: #161b22;
+    border: 1px solid #30363d;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #58a6ff;
+}
+
+/* Social */
+.socials {
+    margin-top: 20px;
+    margin-left: 50px;
 }
 
 .socials a {
-    margin-right: 10px;
-    text-decoration: none;
+    margin-right: 15px;
+    font-size: 22px;
     color: #58a6ff;
+    margin-left: 40px;
 }
 
-/* Resume Button */
-.btn {
-    display: block;
-    margin-top: 20px;
-    padding: 10px;
-    background: #238636;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 6px;
+.socials a:hover {
+    color: #3fb950;
 }
 
-/* Code Block */
-.code pre {
+/* ===============================
+   Code Window
+================================ */
+.code-window {
+    position: relative;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 20px;
+    width: 380px;
+    box-shadow: 0 0 40px rgba(88,166,255,0.05);
+}
+
+/* Glow Effect */
+.code-window::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(88,166,255,0.15), transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(40px);
+    z-index: -1;
+}
+
+.window-bar {
+    margin-bottom: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.code-window pre {
     color: #58a6ff;
+    font-family: "Courier New", monospace;
     font-size: 14px;
-}
-/* Projects Section */
-.projects-section {
-    padding: 40px;
+    line-height: 1.6;
 }
 
+/* ===============================
+   About
+================================ */
+.about {
+    border-top: 1px solid #30363d;
+}
+
+.about-container {
+    max-width: 700px;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.about p {
+    color: #8b949e;
+    line-height: 1.7;
+    font-size: 25px;
+}
+
+.about-meta {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.about-meta span {
+    color: #58a6ff;
+}
+
+/* ===============================
+   Education
+================================ */
+.education-text pre {
+    font-family: "Courier New", monospace;
+    font-size: 18px;      /* Increased from 15px */
+    line-height: 1.9;
+    color: #c9d1d9;
+    white-space: pre-wrap;
+}
 .section-title {
-    text-align: center;
-    margin-bottom: 30px;
+    font-size: 32px;
+    letter-spacing: 1px;
 }
 
-/* Grid Layout */
+
+
+/* ===============================
+   Projects
+================================ */
+.projects {
+    border-top: 1px solid #30363d;
+}
+
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-/* Repo Card Style */
 .repo-card {
     background: #161b22;
     border: 1px solid #30363d;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 20px;
+    transition: 0.3s;
+}
+
+.repo-card:hover {
+    border-color: #58a6ff;
+    box-shadow: 0 0 30px rgba(88,166,255,0.1);
 }
 
 .repo-card h3 {
-    margin-top: 0;
     color: #58a6ff;
+    margin-bottom: 8px;
 }
 
 .repo-card p {
+    color: #8b949e;
     font-size: 14px;
 }
 
@@ -138,68 +293,54 @@ body {
     color: #58a6ff;
     font-size: 14px;
 }
-.window-bar {
-    margin-bottom: 15px;
-}
 
-.dot {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 6px;
-}
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 900px) {
+    .intro {
+        flex-direction: column;
+        gap: 40px;
+    }
 
-.red { background: #ff5f56; }
-.yellow { background: #ffbd2e; }
-.green { background: #27c93f; }
-.hero {
+    .intro-left h1 {
+        font-size: 42px;
+    }
+
+    .section {
+        padding: 120px 5%;
+    }
+
+    .about-meta {
+        grid-template-columns: 1fr;
+    }
+}
+/* Right side container */
+.right-side {
     display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding: 80px 10%;
-}
-.code-card {
-    width: 420px;
-    min-height: 320px;
-
-    background: linear-gradient(145deg, #0b1628, #020617);
-    border: 1px solid rgba(88, 166, 255, 0.25);
-    border-radius: 12px;
-    padding: 25px;
-
-    box-shadow:
-        0 0 40px rgba(88, 166, 255, 0.05),
-        inset 0 0 20px rgba(255,255,255,0.02);
-}
-.window-bar {
-    margin-bottom: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    font-size: 20px;
 }
 
-/* dots */
-.dot {
-    height: 10px;
-    width: 10px;
+/* Profile photo */
+.profile-photo {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    display: inline-block;
-    margin-right: 6px;
+    overflow: hidden;
+    border: 3px solid #30363d;
+    box-shadow: 0 0 40px rgba(88,166,255,0.15);
 }
 
-.red { background: #ff5f56; }
-.yellow { background: #ffbd2e; }
-.green { background: #27c93f; }
-.code-card pre {
-    color: #58a6ff;
-    font-size: 15px;
-    line-height: 1.7;
-    font-family: "Courier New", monospace;
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.code-card:hover {
-    border-color: #58a6ff;
-    box-shadow: 0 0 60px rgba(88, 166, 255, 0.15);
-}
-.terminal pre {
-    font-family: "Courier New", monospace;
-    line-height: 1.6;
-    color: #c9d1d9;
+
+/* Hover effect (optional but nice) */
+.profile-photo:hover {
+    box-shadow: 0 0 60px rgba(88,166,255,0.35);
 }

@@ -2,77 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaibhav Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<!-- Header -->
+<!-- ================= Header ================= -->
 <header class="header">
-    <h2>@Vaibhav</h2>
+    <h2 class="logo">@Vaibhav</h2>
     <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
-        <a href="#">Stats</a>
-        <a href="#">Contributions</a>
     </nav>
 </header>
 
-<!-- Main Section -->
-<section class="main">
 
-    <!-- Left Profile Card -->
-    <div class="card profile">
-        <img src="images/vaibhav.JPG" class="profile-img">
+<!-- ================= Hero / Intro ================= -->
+<section class="section intro">
 
-        <h3>Vaibhav Patil</h3>
-        <p>
-            ⚡ Full Stack Developer passionate about building web applications using Node.js, MongoDB, Java and modern web technologies.
+    <div class="intro-left">
+        <h1>Vaibhav Patil</h1>
+        <p class="role">Full Stack Developer</p>
+
+        <p class="tagline">
+            Building scalable web applications with Node.js, MongoDB and modern backend systems.
         </p>
 
-        <div class="socials">
-            <a href="https://github.com/VPatil3155"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/vaibhav-patil-a95544308/"><i class="fa-brands fa-linkedin"></i></a>
+        <!-- Status -->
+        <div class="status">
+            <span class="dot-status"></span>
+            Open to Opportunities
         </div>
 
-        <a href="resume/resume.pdf" class="btn">Get Resume</a>
+        <!-- Tech Stack -->
+        <div class="tech-stack">
+            <span>Node.js</span>
+            <span>MongoDB</span>
+            <span>Express</span>
+            <span>REST APIs</span>
+        </div>
+
+        <!-- Social -->
+        <div class="socials">
+            <a href="https://github.com/VPatil3155" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
     </div>
 
-    <!-- Right Code Card -->
- <div class="code-card">
 
-    <div class="window-bar">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
+   <!-- Right Side -->
+<div class="right-side">
+
+    <!-- Profile Photo -->
+    <div class="profile-photo">
+        <img src="images/vaibhav.JPG" alt="Vaibhav">
     </div>
+
+    <!-- Code Window -->
+    <!-- <div class="code-window"> -->
+        <!-- <div class="window-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div> -->
 
 <pre>
 const developer = {
   name: "Vaibhav Patil",
-  role: "Full Stack Developer",
+  role: "Full Stack",
+  focus: "Backend",
   location: "India",
-  skills: [
-    "HTML", "CSS", "JavaScript",
-    "Node.js", "MongoDB", "Java"
-  ],
-  hireable: true
+  openToWork: true
 };
 </pre>
+    <!-- </div> -->
 
 </div>
 
-<section id="education" class="section">
-    <h2>Education</h2>
 
-    <div class="card terminal">
+</section>
+
+
+<!-- ================= About ================= -->
+<section id="about" class="section about">
+
+    <div class="about-container">
+        <h2>ABOUT</h2>
+
+        <p>
+            I am a full stack developer focused on building REST APIs,
+            database-driven applications, and scalable backend systems.
+            I enjoy solving real-world problems and continuously improving
+            my development skills.
+        </p>
+
+        <div class="about-meta">
+            <div><span>Location:</span> India</div>
+            <div><span>Education:</span> B.Tech IT</div>
+            <div><span>Focus:</span> Backend Development</div>
+            <div><span>Status:</span> Open to Opportunities</div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ================= Education ================= -->
+<section id="education" class="section education">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="education-text">
 <pre>
-> loading education history...
+> loading education_history...
 
 [2022 - 2026]  B.Tech - Information Technology
-               Your College Name
+               AISSMS Institute of Information Technology
                CGPA: 8.2
 
 [2020 - 2022]  Higher Secondary (12th)
@@ -82,13 +139,14 @@ const developer = {
 status: academic_progress = "completed"
 </pre>
     </div>
-</section>
-
-
 
 </section>
-<!-- Projects Section -->
-<section class="projects-section">
+
+
+
+
+<!-- ================= Projects ================= -->
+<section id="projects" class="section projects">
 
     <h2 class="section-title">Projects</h2>
 
@@ -96,34 +154,46 @@ status: academic_progress = "completed"
 
         <!-- Project 1 -->
         <div class="repo-card">
+            <div class="project-image">
+                <img src="images/hotel.png" alt="Hotel Booking System">
+            </div>
             <h3>Hotel Booking System</h3>
-            <p>Java-based system for managing hotel rooms and reservations with MySQL integration.</p>
-            <span class="tech">Javascript • EJS • CSS</span>
-            <a href="https://github.com/VPatil3155/WonderLust.git" target="_blank">View on GitHub</a>
+            <p>System for managing hotel rooms and reservations.</p>
+            <span class="tech">Java • MySQL</span>
+            <a href="#">View on GitHub</a>
         </div>
 
         <!-- Project 2 -->
         <div class="repo-card">
-            <h3>B2B platform for Medical Supplies</h3>
-            <p>Web application for managing medical supplies and orders for businesses.</p>
-            <span class="tech">React • Node.js • MongoDB • Express </span>
-            <a href="https://github.com/VPatil3155/MediLink.git" target="_blank">View on GitHub</a>
+            <div class="project-image">
+                <img src="images/b2b.png" alt="B2B Medical Platform">
+            </div>
+            <h3>B2B Medical Platform</h3>
+            <p>Platform for managing medical supply orders.</p>
+            <span class="tech">React • Node • MongoDB</span>
+            <a href="#">View on GitHub</a>
         </div>
 
         <!-- Project 3 -->
         <div class="repo-card">
+            <div class="project-image">
+                <img src="images/task.png" alt="Task Manager API">
+            </div>
             <h3>Task Manager API</h3>
-            <p>REST API built using Node.js, Express, and MongoDB with CRUD operations.</p>
+            <p>REST API with full CRUD operations.</p>
             <span class="tech">Node.js • MongoDB</span>
-            <a href="https://github.com/yourusername/task-api" target="_blank">View on GitHub</a>
+            <a href="#">View on GitHub</a>
         </div>
 
         <!-- Project 4 -->
         <div class="repo-card">
+            <div class="project-image">
+                <img src="images/portfolio.png" alt="Portfolio Website">
+            </div>
             <h3>Portfolio Website</h3>
-            <p>Personal GitHub-style portfolio website with dark theme and responsive design.</p>
-            <span class="tech">HTML • CSS • JavaScript</span>
-            <a href="#" target="_blank">Live Demo</a>
+            <p>GitHub-style developer portfolio.</p>
+            <span class="tech">HTML • CSS • JS</span>
+            <a href="#">Live Demo</a>
         </div>
 
     </div>

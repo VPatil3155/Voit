@@ -78,7 +78,7 @@ body {
 }
 
 .intro-left h1 {
-    font-size: 64px;
+    font-size: 56px;
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -609,4 +609,217 @@ body {
     padding:30px;
     border-top:1px solid #30363d;
     color:#8b949e;
+}
+
+/* ===================================
+   Mobile Responsive (768px and below)
+=================================== */
+
+@media (max-width:768px){
+
+    /* Header */
+
+    .header{
+        padding:15px 20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .header nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+    .header nav a{
+        margin:0;
+        font-size:14px;
+    }
+
+    /* Hero */
+
+    .intro{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding:120px 20px 60px;
+        gap:35px;
+    }
+
+    .intro-left{
+        max-width:100%;
+    }
+
+    .intro-left h1{
+        font-size:40px;
+    }
+
+    .role{
+        font-size:22px;
+    }
+
+    .tagline{
+        font-size:17px;
+    }
+
+    /* Profile */
+
+    .profile-photo{
+        width:220px;
+        height:220px;
+    }
+
+    /* Social */
+
+    .socials{
+        margin:25px 0 0;
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .socials a{
+        margin:0 10px;
+        font-size:28px;
+    }
+
+    /* Resume Button */
+
+    .resume-container{
+        width:100%;
+        margin-top:20px;
+    }
+
+    .resume-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    /* About */
+
+    .about{
+        display:block;
+    }
+
+    .about-wrapper{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .about p{
+        font-size:18px;
+    }
+
+    .about-meta{
+        grid-template-columns:1fr;
+        font-size:16px;
+    }
+
+    /* Education */
+
+    .education-text pre{
+        font-size:15px;
+        line-height:1.7;
+        overflow-x:auto;
+    }
+
+    /* Code Window */
+
+    .code-window{
+        width:100%;
+        padding:0;
+    }
+
+    .code-window pre{
+        margin:0;
+        font-size:15px;
+        overflow-x:auto;
+    }
+
+    /* Projects */
+
+    .projects-container{
+        grid-template-columns:1fr;
+    }
+
+    .featured-project{
+        grid-column:auto;
+    }
+
+    .project-image{
+        height:180px;
+    }
+
+    /* Skills */
+
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skill-items{
+        grid-template-columns:1fr;
+    }
+
+    /* Contact */
+
+    .contact-container{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    /* Common */
+
+    .section{
+        padding:80px 20px;
+    }
+
+}
+/* ==========================
+   Hamburger Menu
+========================== */
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    color:#58a6ff;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+    .header{
+        padding:18px 20px;
+        flex-direction:row;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .navbar{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#0d1117;
+
+        display:flex;
+        flex-direction:column;
+
+        max-height:0;
+        overflow:hidden;
+
+        transition:.4s;
+    }
+
+    .navbar.active{
+        max-height:400px;
+        padding:15px 0;
+    }
+
+    .navbar a{
+        margin:15px 0;
+        text-align:center;
+        font-size:18px;
+    }
 }
